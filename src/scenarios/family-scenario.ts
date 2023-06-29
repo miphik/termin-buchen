@@ -17,7 +17,7 @@ export class FamilyScenario {
 
   static async selectApplyReason(wd: WebDriver) {
     const text =
-      'Residence permit for spouses, parents and children of German citizens (sect. 28)';
+      'Residence permit for spouses, parents and children of foreign citizens (sect. 29-34)';
     const input = await Utils.waitUntilVisible(
       wd,
       // EU Blue card

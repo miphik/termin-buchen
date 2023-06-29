@@ -45,7 +45,7 @@ export class SecondPageScenario {
 
   static async selectApplyPurpose(wd: WebDriver, reason: string) {
     let text = 'Apply for a residence title';
-    if (reason === 'extend') {
+    if (reason === 'extend' || reason === 'family') {
       text = 'Extend a residence title';
     }
     const applyForLabel = await Utils.waitUntilVisible(
