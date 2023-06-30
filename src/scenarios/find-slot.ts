@@ -41,9 +41,9 @@ export const findSlot = async (wd: WebDriver): Promise<boolean> => {
     );
     const text = await box.getText();
     console.log(`[findSlot]: ${text}`);
+    return text != 'There are currently no dates available for the selected service! Please try again later.';
   } catch (e) {
     console.error(`[findSlot]: error ${e}`);
-    return true;
+    throw e;
   }
-  return false;
 };
